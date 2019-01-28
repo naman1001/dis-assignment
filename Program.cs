@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,10 +44,10 @@ namespace DIS_Assignment1
         {
             try
             {
-                int n, i, c;// initialisation by defining integers
-                for (n = x; n <= y; n++) //x and y are the values provided by user
+                int n, i, c;// initialisation by defining integers value n, i ,c
+                for (n = x; n <= y; n++) //x and y are the values 
                 {
-                   c = 0;
+                    c = 0;
                     //the loop will check whether the number 'n' is divisible by any number between 2 and half of the number n. If it will be divisible then it will increment the counter 
                     // Also in final result it will display total prime number between  'x' and 'y'.
                     for (i = 2; i <= n / 2; i++)
@@ -95,19 +95,19 @@ namespace DIS_Assignment1
             try
             {
                 // It will convert to Integer.
-                int n = Convert.ToInt32(n);
+                int m = Convert.ToInt32(n);
                 string result;
 
                 result = "";
                 // This while loop will run till num is greater than 1
                 // I have taken a variable 'remainder' which will store remainder value after dividing num with 2. After that I will store remainder value adding into another variable 'result'.
-                while (n > 1)
+                while (m > 1)
                 {
-                    int remainder = n % 2;
+                    int remainder = m % 2;
                     result = Convert.ToString(remainder) + result;
-                    n /= 2;
+                    m /= 2;
                 }
-                result = Convert.ToString(n) + result;
+                result = Convert.ToString(m) + result;
                 return Convert.ToInt64(result);
             }
             catch
@@ -148,7 +148,7 @@ namespace DIS_Assignment1
                 for (int i = 1; i <= n; i++)
                 {
                     for (sp = 1; sp <= (n - i); sp++) //iterating  
-                        Console.Write(" "); 
+                        Console.Write(" ");
                     for (x = 1; x <= i; x++) //incrementing the value  
                         Console.Write('*'); //printing 
                     for (x = (i - 1); x >= 1; x--) //decrementing the value  
@@ -177,7 +177,7 @@ namespace DIS_Assignment1
                     int counter = 1;
                     for (int j = i + 1; j < n; j++)
                     {
-                        if (a[i] == a[j])   
+                        if (a[i] == a[j])
                         {
                             b[j] = true;    // if the value satisfy
                             counter++;     //increment the counter
