@@ -36,36 +36,34 @@ namespace DIS_Assignment1
 
             Console.ReadLine();
 
-            // The said assignment helped me in refreshing my knowledge of some of the basic concepts like loops and other conditional statements 
-            // Also the assignment has helped i getting good hands-on with the visual studio
+            // The said assignment helped me in refreshing my knowledge of some of the basic concepts like loops.
         }
 
         public static void printPrimeNumbers(int x, int y)
         {
             try
             {
-                int n, i, c;// initialisation by defining integers value n, i ,c
-                for (n = x; n <= y; n++) //x and y are the values 
+                int n, i, c;// initializing integers value n, i ,c
+                for (n = x; n <= y; n++) // This for loop first take the value of x as n then checks rhe condition that the value must be less than equal to y and if it satisfy then it will repeat untill it unsatisfy that condition
                 {
                     c = 0;
-                    //the loop will check whether the number 'n' is divisible by any number between 2 and half of the number n. If it will be divisible then it will increment the counter 
                     // Also in final result it will display total prime number between  'x' and 'y'.
                     for (i = 2; i <= n / 2; i++)
                     {
-                        if (n % i == 0)
+                        if (n % i == 0) // if will check this condition that n will divide by i and if remainder is 0 then it will enter this loop
                         {
-                            c++;
+                            c++; // c will increment
                             break;
                         }
                     }
-                    if (c == 0 && n != 1)
+                    if (c == 0 && n != 1) // this if comment c must be equal to 0 and also checks n not equal to 1 and if it passes both condition then it will write.
                         Console.Write("{0} ", n);
                 }
-                Console.Write("\n");
+                Console.Write("\n"); // for space
             }
             catch
             {
-                Console.WriteLine("Exception occured while computing printPrimeNumbers()");
+                Console.WriteLine("Exception occured while computing printPrimeNumbers()"); // to catch exception
             }
         }
 
@@ -73,14 +71,14 @@ namespace DIS_Assignment1
         {
             try
             {
-                int i, sum = 0;
+                int i, sum = 0; // two integers are created i and sum
                 int x = 1;// Set x=1
-                for (i = 1; i <= n; i++)// the loop will iterate from number "1".
+                for (i = 1; i <= n; i++)// the loop will iterate from number "1". than satisfy this condition i should be less than n, then it will increase untill it unsatisfy this condition 
                 {
                     sum = sum + x;//adding variable "sum" with "x" 
-                    x = (x) + 1;
+                    x = (x) + 1; // increasing value of x by 1
                 }
-                return Convert.ToDouble(sum);
+                return Convert.ToDouble(sum); // returning sum method
             }
             catch
             {
@@ -94,20 +92,19 @@ namespace DIS_Assignment1
         {
             try
             {
-                // It will convert to Integer.
-                int m = Convert.ToInt32(n);
+                int m = Convert.ToInt32(n); // It will convert to Integer.
                 string result;
 
-                result = "";
+                result = ""; // pass an empty 
                 // This while loop will run till num is greater than 1
                 // I have taken a variable 'remainder' which will store remainder value after dividing num with 2. After that I will store remainder value adding into another variable 'result'.
                 while (m > 1)
                 {
-                    int remainder = m % 2;
-                    result = Convert.ToString(remainder) + result;
+                    int remainder = m % 2; // to check remainder
+                    result = Convert.ToString(remainder) + result; // to add previous result to current one 
                     m /= 2;
                 }
-                result = Convert.ToString(m) + result;
+                result = Convert.ToString(m) + result; // adding last element through which it will exit while loop
                 return Convert.ToInt64(result);
             }
             catch
@@ -121,15 +118,15 @@ namespace DIS_Assignment1
 
         public static long binaryToDecimal(long n)
         {
-            long dinl = 0, binl = 1, rem;
+            long dinl = 0, binl = 1, rem; // Created three long datatype and set din1=0 and bin1=1
             try
             {
-                while (n > 0)
+                while (n > 0) // while loop will check condition for value n
                 {
                     rem = n % 10;               //taking  the value in unit digit 
                     dinl = (dinl + rem) * binl;  //calculating decimal value
                     n = n / 10;
-                    binl = binl * 2;
+                    binl = binl * 2;  // Converting in decimal
                 }
             }
             catch
@@ -137,15 +134,15 @@ namespace DIS_Assignment1
                 Console.WriteLine("Exception occured while computing binaryToDecimal()");
             }
 
-            return dinl;
+            return dinl; // returning the value
         }
 
         public static void printTriangle(int n)
         {
             try
             {
-                int sp, x;
-                for (int i = 1; i <= n; i++)
+                int sp, x; // created two integers sp and x
+                for (int i = 1; i <= n; i++) // this for loop will start will i=1 and than check the condition i should be less than n and than i will increase upto the condition will unsatisfy. 
                 {
                     for (sp = 1; sp <= (n - i); sp++) //iterating  
                         Console.Write(" ");
